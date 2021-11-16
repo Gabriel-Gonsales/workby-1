@@ -69,7 +69,6 @@
 							<p><?php echo $post['nome']?></p>
 							<p><?php echo $post['contato']?></p>
 							<p><?php echo $post['descricao']?></p>
-							<p>julia linda e joão gostoso</p>
 						</a>
 
 					<?php endforeach;?>
