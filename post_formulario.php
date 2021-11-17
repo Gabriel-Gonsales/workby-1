@@ -13,6 +13,7 @@
 			<div class="col-md-12">
 				<?php
 					include 'includes/testemenu.php';
+					include 'includes/valida_login.php';
 				?>
 			</div>
 		</div>
@@ -28,11 +29,11 @@
 						$$indice = limparDados($dado);
 					}
 
-					if (!empty($id)) {
-						$id = (int)$id;
+					if (!empty($post_id)) {
+						$post_id = (int)$post_id;
 
 						$criterio = [
-							['post_id', '=', $id]
+							['post_id', '=', $post_id]
 						];
 
 						$retorno = buscar(
@@ -47,7 +48,7 @@
 				<h2>Post</h2>
 				<form method="post" action="core/post_repositorio.php">
 					<input type="hidden" name="acao"
-					       value="<?php echo empty($id) ? 'insert' : 'update' ?>">
+					       value="<?php echo empty($post_id) ? 'insert' : 'update' ?>">
 					<input type="hidden" name="id"
 					       value="<?php echo $entidade['post_id'] ?? '' ?>">
 					<div class="form_group">
@@ -55,9 +56,14 @@
 						<select class="form_control col-md-12" type="text" 
 						       require="required" id="tiposervico" name="tiposervico"
 						       value="<?php echo $entidade['tiposervico'] ?? '' ?>">
-						    <option value="eletrica">Elétrica</option>
-							<option value="mecanica">Mecânica</option>
-							<option value="outro">Outro</option>
+						    <option value="Tecnologia da informação">Tecnologia da informação</option>
+						    <option value="Elétrica">Elétrica</option>
+							<option value="Serviços domésticos">Serviços domésticos</option>
+							<option value="Construção civil">Construção civil</option>
+							<option value="Instalação e montagem">Instalação e montagem</option>
+							<option value="Artes e design">Artes e design</option>
+							<option value="Beleza e bem-estar">Beleza e bem-estar</option>
+							<option value="Eventos">Eventos</option>
 						</select>
 					</div>
 					<div class="form_group">
