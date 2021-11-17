@@ -9,6 +9,11 @@
       <li class="nav-item active">
         <a class="nav-link h4" href="#" style="font-family: 'Varela Round', sans-serif; color: yellow;">Quem somos?</a>
       </li>
+      <?php if ((isset($_SESSION['login'])) && ($_SESSION['login']['usuario']['usuario_adm'] != 1)): ?>
+        <li class="nav-item active">
+          <a class="nav-link h4" href="post_formulario.php" style="font-family: 'Varela Round', sans-serif; color: yellow;"> Incluir serviço</a>
+        </li>
+      <?php endif; ?>
       <?php if ((isset($_SESSION['login'])) && ($_SESSION['login']['usuario']['usuario_adm'] === 1)) : 
         ?>
         <li class="nav-item active">
