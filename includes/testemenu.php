@@ -37,7 +37,7 @@
       $criterio = [['data_postagem', '<=',$data_atual]];
     ?>
     <div class="card-body text-right text-white">
-      <a href="#" class="btn btn-link btn-sm" role="buttom">
+      <a href="perfil_usuario.php" class="btn btn-link btn-sm" role="buttom">
         <i class="far fa-user-circle" style="font-size: 25px; color: yellow; font-weight: bold;"></i>
       </a>
       <a href="core/usuario_repositorio.php?acao=logout"
