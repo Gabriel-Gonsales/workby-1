@@ -22,8 +22,8 @@ switch ($acao) {
 			'tiposervico'		=> $tiposervico,
 			'contato'			=> $contato,
 			'descricao'			=> $descricao,
-			'data_post'	=> "$data_post $hora_post",
-			'fk_usuario_usuario_id '	=> $_SESSION['login'] ['usuario'] ['id']
+			'data_post'	=> $data_atual,
+			'fk_usuario_usuario_id '	=> $_SESSION['login'] ['usuario'] ['usuario_id']
 		];
 		insere(
 			'post',
@@ -55,5 +55,5 @@ switch ($acao) {
 		);
 		break;
 }
-header('Location: ../index.php');
+	//header('Location: ../index.php');
 ?>
