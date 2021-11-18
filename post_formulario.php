@@ -28,7 +28,7 @@
 					foreach ($_GET as $indice => $dado) {
 						$$indice = limparDados($dado);
 					}
-
+					$data_atual = date('Y-m-d H:i:s');
 					if (!empty($post_id)) {
 						$post_id = (int)$post_id;
 
@@ -80,7 +80,9 @@
 						          <?php echo $entidade['descricao'] ?? '' ?>	
 						</textarea>
 					</div>
-
+					<?php  
+						$entidade['data_post'] = $data_atual;
+					?>
 					<button class="btn col-md-12 text-dark" type="submit" style="background-color: yellow;">Salvar</button>
 				</form>
 			</div>

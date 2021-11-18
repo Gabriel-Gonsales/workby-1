@@ -45,6 +45,7 @@
 			      $posts = buscar(
 			        'post',
 			        [
+			          'fk_usuario_usuario_id',
 			          'tiposervico',
 			          'contato',
 			          'descricao',
@@ -69,6 +70,10 @@
 							<p><?php echo $post['nome']?></p>
 							<p><?php echo $post['contato']?></p>
 							<p><?php echo $post['descricao']?></p>
+
+							<a class="list-group-item list-group-item-action text-white bg-dark" href="denuncia_formulario.php?denunciado=<?php echo $post['fk_usuario_usuario_id']?>" style="border-color: yellow;">
+								<i class="far fa-flag" style="font-size: 25px; color: yellow; font-weight: bold;"></i>Denunciar
+							</a>
 						</a>
 
 					<?php endforeach;?>

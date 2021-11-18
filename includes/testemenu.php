@@ -1,7 +1,11 @@
 <?php
   session_start();
 ?>
-
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+</head>
 <nav class="navbar navbar-expand-lg navbar-light" style="min-height: 70px; background-color: black;">
   <a class="nav-link" href="index.php"><img src="img/LOGO.png" style="max-height: 40px;"></a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">

@@ -13,7 +13,29 @@
 		<div class="col-md-12">
 			<!--Topo //-->
 			<?php
-				include 'includes/testemenu.php'
+				include 'includes/testemenu.php';
+  				require_once 'includes/funcoes.php';
+  				require_once 'core/conexao_mysql.php';
+  				require_once 'core/sql.php';
+ 				require_once 'core/mysql.php';
+		      	foreach ($_GET as $indice => $dado) {
+		        $$indice = limparDados($dado);
+		      	}
+
+		      	$criterio = ['fk_usuario_usuario_id', '=', $_SESSION['login']['usuario']['usuario_id']];
+			    $post = buscar(
+			        'post',
+			        [
+			          'post_id',
+			          'tiposervico',
+			          'contato',
+			          'descricao',
+			          'data_post'
+			        ],
+			        [
+			        	$criterio
+			        ]
+			    );
 			?>
 		</div>
 	</div>
@@ -21,6 +43,13 @@
 		<div class="col-md-12" style="padding-top: 50px;">	
 			<!-- Conteudo //-->
 			<h2>Olá, <?php echo $_SESSION['login']['usuario']['usuario_nome']?>!</h2>
+		</div>
+		<div class="col-md-12" style="padding-top: 50px;">
+			<a class="list-group-item list-group-item-action text-white bg-dark" href="post_detalhe.php?post=<?php echo $post['post_id']?>" style="border-color: yellow; border-style: inset;">
+				<h3><?php echo $post['tiposervico']?> </h3>
+				<p><?php echo $post['contato']?></p>
+				<p><?php echo $post['descricao']?></p>
+			</a>
 		</div>
 	</div>
 	<div class="row">
