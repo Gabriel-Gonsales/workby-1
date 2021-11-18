@@ -77,7 +77,7 @@
 							<a class="list-group-item list-group-item-action text-white bg-dark" href="denuncia_formulario.php?id_destinatario=<?php echo $post['fk_usuario_usuario_id']?>" style="border-color: yellow;">
 								<i class="far fa-flag" style="font-size: 20px; color: yellow; font-weight: bold;"></i> Denunciar
 						</a>
-
+						<br>
 					<?php endforeach;?>
 					</div>
 				<?php endif; ?>
