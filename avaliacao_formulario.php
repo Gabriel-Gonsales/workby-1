@@ -50,9 +50,10 @@
 				<h2>Avaliação</h2>
 				<form method="post" action="core/avaliacao_repositorio.php">
 					<input type="hidden" name="acao"
-					       value="<?php echo empty($avaliacao_id) ? 'insert' : 'update' ?>">
+					       value="<?php echo empty($id) ? 'insert' : 'update' ?>">
 					<input type="hidden" name="id"
 					       value="<?php echo $entidade['avaliacao_id'] ?? '' ?>">
+					<input type="hidden" name="fk_post_post_id" value="<?php echo $id_post;?>">
 					<div class="form_group">
 						<label for="avaliacao_nota">Nota</label>
 						<input type="number" min="1" max="5" class="form_control col-md-12"
@@ -66,8 +67,7 @@
 						          <?php echo $entidade['avaliacao_descricao'] ?? '' ?>	
 						</textarea>
 					</div>
-					<?php  
-						$entidade['avaliacao_data'] = $data_atual;
+					<?php
 						$entidade['fk_post_post_id'] = $id_post;
 					?>
 					<button class="btn col-md-12 text-dark" type="submit" style="background-color: yellow;">Salvar</button>

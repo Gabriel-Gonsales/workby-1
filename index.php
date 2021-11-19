@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html>
 <head>
-	<title>Página inicial | Projeto para Web com PHP</title>
+	<title>WorkBy</title>
 	<link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
 	<script src="https://kit.fontawesome.com/401c6a38e1.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,16 +60,16 @@
 						<?php
 							foreach($posts as $post):
 						?>
-						<a class="list-group-item list-group-item-action text-white bg-dark" href="post_detalhe.php?post=<?php echo $post['post_id']?>" style="border-color: yellow; border-style: inset;">
+						<a class="list-group-item list-group-item-action text-white bg-dark" href="post_detalhe.php?post_id=<?php echo $post['post_id']?>" style="border-color: yellow; border-style: inset;">
 							<h3><?php echo $post['tiposervico']?> </h3>
 							<p><?php echo $post['nome']?></p>
 							<p><?php echo $post['contato']?></p>
 							<p><?php echo $post['descricao']?></p>
 						</a>
-						<a class="list-group-item list-group-item-action text-white bg-dark" href="avaliacao_formulario.php?id_post=<?php echo $post['fk_usuario_usuario_id']?>" style="border-color: yellow;">
+						<a class="list-group-item list-group-item-action text-white bg-dark" href="avaliacao_formulario.php?id_post=<?php echo $post['post_id']?>" style="border-color: yellow;">
 								<i class="far fa-star" style="font-size: 20px; color: yellow; font-weight: bold;"></i> Avaliar
 						</a>
-						<a class="list-group-item list-group-item-action text-white bg-dark" href="denuncia_formulario.php?id_destinatario=<?php echo $post['fk_usuario_usuario_id']?>" style="border-color: yellow;">
+						<a class="list-group-item list-group-item-action text-white bg-dark" href="denuncia_formulario.php?id_destinatario=<?php echo $post['post_id']?>" style="border-color: yellow;">
 								<i class="far fa-flag" style="font-size: 20px; color: yellow; font-weight: bold;"></i> Denunciar
 						</a>
 						<br>

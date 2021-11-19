@@ -8,7 +8,7 @@
 	foreach ($_GET as $indice => $dado) {
 		$$indice = limparDados($dado);
 	}
-	$criterio = [['avaliacao_id', '>=',1]];
+	$criterio = [];
 
 
 	$post = buscar(
@@ -20,7 +20,7 @@
           '(select usuario_nome from usuario where usuario.usuario_id = post.fk_usuario_usuario_id) as nome'
 		],
 		[
-			['post_id', '=', $post]
+			['post_id', '=', $post_id]
 		]
 	);
 
@@ -31,7 +31,6 @@
       'avaliacao_nota',
       'avaliacao_descricao',
       'avaliacao_id',
-      'avaliacao_data',
       '(select usuario_nome from usuario where usuario.usuario_id = avaliacao.fk_usuario_usuario_id) as nome'
     ],
     [
@@ -67,9 +66,9 @@
 						Por <?php echo $post['nome']?>
 					</h5>
 					<div class="card-text">
-						<?php echo html_entity_decode($post['contato']) ?>
+						<?php echo $post['contato']?>
 						<br>
-						<?php echo html_entity_decode($post['descricao']) ?>
+						<?php echo $post['descricao'] ?>
 					</div>
 				</div>
 			<h4>Avaliações</h4>
@@ -78,10 +77,10 @@
 				<div class="card-body">
 					<h5 class="card-tittle"><?php echo $avaliaco['avaliacao_nota']?></h5>
 					<h5 class="card-subtittle mb-2 text-muted">
-						Por <?php echo $avaliacao['nome']?> em <?php echo $avaliacao['avaliacao_data']?>
+						Por <?php echo $avaliacao['nome']?>
 					</h5>
 					<div class="card-text">
-						<?php echo html_entity_decode($avaliacao['avaliacao_descricao']) ?>
+						<?php echo $avaliacao['avaliacao_descricao']?>
 						<br>				
 				</div>
 				<?php endforeach;?>

@@ -48,11 +48,12 @@
 					}
 				?>
 				<h2>Denúncia</h2>
-				<form method="post" action="core/post_repositorio.php">
+				<form method="post" action="core/denuncia_repositorio.php">
 					<input type="hidden" name="acao"
 					       value="<?php echo empty($id) ? 'insert' : 'update' ?>">
 					<input type="hidden" name="id"
 					       value="<?php echo $entidade['id'] ?? '' ?>">
+					<input type="hidden" name="id_destinatario" value="<?php echo $id_destinatario?>">
 					<div class="form_group">
 						<label for="conteudo">Conteúdo</label>
 						<textarea class="form_control col-md-12" type="text"
@@ -61,10 +62,6 @@
 						</textarea>
 						<br>
 					</div>
-					<?php  
-						$entidade['data'] = $data_atual;
-						$entidade['id_destinatario'] = $id_destinatario;
-					?>
 					<button class="btn col-md-12 text-dark" type="submit" style="background-color: yellow;">Salvar</button>
 				</form>
 			</div>

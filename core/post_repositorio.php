@@ -18,11 +18,12 @@ $id = (int)$id;
 
 switch ($acao) {
 	case 'insert':
+	echo $_SESSION['login'] ['usuario'] ['usuario_id'];
 		$dados = [
 			'tiposervico'		=> $tiposervico,
 			'contato'			=> $contato,
 			'descricao'			=> $descricao,
-			'fk_usuario_usuario_id '	=> $_SESSION['login'] ['usuario'] ['usuario_id']
+			'fk_usuario_usuario_id'	=> $_SESSION['login'] ['usuario'] ['usuario_id']
 		];
 		insere(
 			'post',

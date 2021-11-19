@@ -21,7 +21,7 @@ switch ($acao) {
 		$dados = [
 			'conteudo'		=> $conteudo,
 			'id_destinatario'			=> $id_destinatario,
-			'fk_usuario_id '	=> $_SESSION['login'] ['usuario'] ['usuario_id']
+			'fk_usuario_id'	=> $_SESSION['login'] ['usuario'] ['usuario_id']
 		];
 		insere(
 			'denuncia',

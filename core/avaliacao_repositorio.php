@@ -14,15 +14,16 @@ foreach ($_GET as $indice => $dado) {
 	$$indice = limparDados($dado);
 }
 
-$avaliacao_id = (int)$avaliacao_id;
+$id = (int)$id;
 
 switch ($acao) {
 	case 'insert':
+	echo $fk_post_post_id;
 		$dados = [
 			'avaliacao_descricao'		=> $avaliacao_descricao,
 			'avaliacao_nota'			=> $avaliacao_nota,
 			'fk_post_post_id'	=> $fk_post_post_id,
-			'fk_usuario_usuario_id '	=> $_SESSION['login'] ['usuario'] ['usuario_id']
+			'fk_usuario_usuario_id'	=> $_SESSION['login'] ['usuario'] ['usuario_id']
 		];
 		insere(
 			'avaliacao',
