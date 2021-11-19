@@ -3,6 +3,7 @@
 <head>
 	<title>Usuários | Projeto para Web com PHP</title>
 	<link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/401c6a38e1.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 

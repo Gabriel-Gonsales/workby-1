@@ -3,6 +3,7 @@
 <head>
 	<title>Usuários | Projeto para Web com PHP</title>
 	<link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/401c6a38e1.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
@@ -29,7 +30,7 @@
 		</div>
 		<div class="container" style="min-height: 500px;">
 			<div class="col-md-10" style="padding-top: 50px;">
-				<h2>Usuário</h2>
+				<h2>Denúncias</h2>
 				<?php include 'includes/busca.php';?>
 				<?php 
 					require_once 'includes/funcoes.php';
@@ -41,42 +42,34 @@
 						$$indice = limparDados($dado);
 					}
 
-					$data_atual = date('Y-m-d H:i:s');
-
 					$criterio = [];
 
 					if (!empty($busca)) {
-						$criterio[] = ['usuario_nome', 'like', "%{$busca}%"];
+						$criterio[] = ['id', 'like', "%{$busca}%"];
 					}
 
 					$result = buscar(
-						'usuario',
+						'denuncia',
 						[
-							'usuario_id',
-							'usuario_nome',
-							'usuario_email',
-							'usuario_nascimento',
-							'usuario_CPF',
-							'usuario_telefone',
-							'usuario_genero',
-							'usuario_adm'
+							'id',
+							'conteudo',
+							'id_destinatario',
+							'fk_usuario_id',
+							'(select usuario_cpf from usuario where usuario.usuario_id = denuncia.fk_usuario_id) as CPF'
 						],
 						$criterio,
-						'usuario_nome ASC'
+						'id ASC'
 					);
 				?>
 				<br>
 				<table class="table table-borded table-hover table-striped table-responsive{-sm|-md|-lg|-xl}">
 					<thead>
 						<tr>
-							<td>Nome</td>
-							<td>E-mail</td>
-							<td>Nascimento</td>
-							<td>Telefone</td>
-							<td>Gênero</td>
-							<td>CPF</td>
-							<td>Excluir</td>
-							<td>Administrador</td>
+							<td>Id da denúncia</td>
+							<td>Id de destino</td>
+							<td>Autor (CPF)</td>
+							<td>Conteudo</td>
+							<td>Resolução</td>
 						</tr>
 					</thead>
 					<tbody>
@@ -84,14 +77,11 @@
 							foreach ($result as $entidade):
 						?>
 						<tr>
-							<td><?php echo $entidade['usuario_nome']?></td>
-							<td><?php echo $entidade['usuario_email']?></td>
-							<td><?php echo $entidade['usuario_nascimento']?></td>
-							<td><?php echo $entidade['usuario_telefone']?></td>
-							<td><?php echo $entidade['usuario_genero']?></td>
-							<td><?php echo $entidade['usuario_CPF']?></td>
-							<td><a href='core/usuario_repositorio.php?acao=delete&usuario_id=<?php echo $entidade['usuario_id']?>'>Excluir</a></td>
-							<td><a href='core/usuario_repositorio.php?acao=adm&usuario_id=<?php echo $entidade['usuario_id']?>&valor=<?php echo !$entidade['usuario_adm']?>'><?php echo ($entidade['usuario_adm']==1)?'Rebaixar':'Promover';?></a></td>
+							<td><?php echo $entidade['id']?></td>
+							<td><?php echo $entidade['id_destinatario']?></td>
+							<td><?php echo $entidade['CPF']?></td>
+							<td><?php echo $entidade['conteudo']?></td>
+							<td><a href='core/denuncia_repositorio.php?acao=delete&id=<?php echo $entidade['id']?>'>Resolvido</a></td>
 						</tr>
 					<?php endforeach;?>
 					</tbody>		

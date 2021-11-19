@@ -86,7 +86,7 @@
 			break;
 
 		case 'adm':
-			$id_usuario = (int)$id_usuario;
+			$usuario_id = (int)$usuario_id;
 			$valor = (int)$valor;
 
 			$dados = [
@@ -94,7 +94,7 @@
 			];
 
 			$criterio = [
-				['id_usuario', '=', $id_usuario]
+				['usuario_id', '=', $usuario_id]
 			];
 
 			atualiza(

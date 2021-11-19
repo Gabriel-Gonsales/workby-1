@@ -21,8 +21,7 @@ switch ($acao) {
 		$dados = [
 			'conteudo'		=> $conteudo,
 			'id_destinatario'			=> $id_destinatario,
-			'data'	=> $data_atual,
-			'fk_usuario_usuario_id '	=> $_SESSION['login'] ['usuario'] ['usuario_id']
+			'fk_usuario_id '	=> $_SESSION['login'] ['usuario'] ['usuario_id']
 		];
 		insere(
 			'denuncia',
@@ -32,8 +31,7 @@ switch ($acao) {
 	case 'update':
 		$dados = [
 			'conteudo'		=> $conteudo,
-			'id_destinatario'			=> $id_destinatario,
-			'data'	=> "$data_denuncia $hora_denuncia"
+			'id_destinatario'			=> $id_destinatario
 		];
 		$criterio = [
 			['denuncia_id','=',$denuncia_id]
@@ -46,7 +44,7 @@ switch ($acao) {
 		break;
 	case 'delete':
 		$criterio = [
-			['denuncia_id','=',$denuncia_id]
+			['id','=',$id]
 		];
 		deleta(
 			'denuncia',

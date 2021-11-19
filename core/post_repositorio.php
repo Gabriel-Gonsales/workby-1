@@ -22,7 +22,6 @@ switch ($acao) {
 			'tiposervico'		=> $tiposervico,
 			'contato'			=> $contato,
 			'descricao'			=> $descricao,
-			'data_post'	=> $data_atual,
 			'fk_usuario_usuario_id '	=> $_SESSION['login'] ['usuario'] ['usuario_id']
 		];
 		insere(

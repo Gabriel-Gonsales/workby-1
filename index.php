@@ -20,7 +20,6 @@
 	<div class="container" style="min-height: 500px;">
 		<div class="col-md-12" style="padding-top: 50px;">	
 			<!-- Conteudo //-->
-			<h2>Serviços disponíveis</h2>
 			    <?php 
       				require_once 'includes/funcoes.php';
       				require_once 'core/conexao_mysql.php';
@@ -29,9 +28,6 @@
 			      	foreach ($_GET as $indice => $dado) {
 			        $$indice = limparDados($dado);
 			      	}
-			      $data_atual = date('Y-m-d H:i:s');
-
-			      $criterio = [['data_post', '<=',$data_atual]];
 
 			      if (!empty($busca)) {
 			        $criterio[] = [
@@ -41,7 +37,7 @@
 			          "%{$busca}%"
 			        ];
 			      }
-
+			      $criterio = [['post_id', '>=',1]];
 			      $posts = buscar(
 			        'post',
 			        [
@@ -49,21 +45,19 @@
 			          'tiposervico',
 			          'contato',
 			          'descricao',
-			          'data_post',
 			          'post_id',
 			          '(select usuario_nome from usuario where usuario.usuario_id = post.fk_usuario_usuario_id) as nome'
 			        ],
 			        $criterio,
-			        'data_post DESC'
+			        'post_id DESC'
 			      );
      			?>
 			<div>
 				<?php if (isset($_SESSION['login'])): ?>
+					<h2>Serviços disponíveis</h2>
 					<div class="list-group">
 						<?php
 							foreach($posts as $post):
-							$data = date_create($post['data_post']);
-							$data = date_format($data, 'd/m/Y H:i:s');
 						?>
 						<a class="list-group-item list-group-item-action text-white bg-dark" href="post_detalhe.php?post=<?php echo $post['post_id']?>" style="border-color: yellow; border-style: inset;">
 							<h3><?php echo $post['tiposervico']?> </h3>
