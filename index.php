@@ -51,7 +51,7 @@
 			          'descricao',
 			          'data_post',
 			          'post_id',
-			          '(select usuario_nome from usuario where usuario.usuario_id = post.	fk_usuario_usuario_id) as nome'
+			          '(select usuario_nome from usuario where usuario.usuario_id = post.fk_usuario_usuario_id) as nome'
 			        ],
 			        $criterio,
 			        'data_post DESC'

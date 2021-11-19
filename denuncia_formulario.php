@@ -29,11 +29,11 @@
 						$$indice = limparDados($dado);
 					}
 					$data_atual = date('Y-m-d H:i:s');
-					if (!empty($post_id)) {
-						$post_id = (int)$post_id;
+					if (!empty($id)) {
+						$id = (int)$id;
 
 						$criterio = [
-							['post_id', '=', $post_id]
+							['id', '=', $id]
 						];
 
 						$retorno = buscar(
@@ -45,43 +45,23 @@
 						$entidade = $retorno[0];
 					}
 				?>
-				<h2>Post</h2>
+				<h2>Denúncia</h2>
 				<form method="post" action="core/post_repositorio.php">
 					<input type="hidden" name="acao"
-					       value="<?php echo empty($post_id) ? 'insert' : 'update' ?>">
+					       value="<?php echo empty($id) ? 'insert' : 'update' ?>">
 					<input type="hidden" name="id"
-					       value="<?php echo $entidade['post_id'] ?? '' ?>">
+					       value="<?php echo $entidade['id'] ?? '' ?>">
 					<div class="form_group">
-						<label for="titulo">Tipo de serviço</label>
-						<select class="form_control col-md-12" type="text" 
-						       require="required" id="tiposervico" name="tiposervico"
-						       value="<?php echo $entidade['tiposervico'] ?? '' ?>">
-						    <option value="Tecnologia da informação">Tecnologia da informação</option>
-						    <option value="Elétrica">Elétrica</option>
-							<option value="Serviços domésticos">Serviços domésticos</option>
-							<option value="Construção civil">Construção civil</option>
-							<option value="Instalação e montagem">Instalação e montagem</option>
-							<option value="Artes e design">Artes e design</option>
-							<option value="Beleza e bem-estar">Beleza e bem-estar</option>
-							<option value="Eventos">Eventos</option>
-						</select>
-					</div>
-					<div class="form_group">
-						<label for="contato">Contato</label>
+						<label for="conteudo">Conteúdo</label>
 						<textarea class="form_control col-md-12" type="text"
-						          require="required" id="contato" name="contato">
-						          <?php echo $entidade['contato'] ?? '' ?>	
+						          require="required" id="conteudo" name="conteudo">
+						          <?php echo $entidade['conteudo'] ?? '' ?>	
 						</textarea>
-					</div>
-					<div class="form_group">
-						<label for="descricao">Descrição</label>
-						<textarea class="form_control col-md-12" type="text"
-						          require="required" id="descricao" name="descricao">
-						          <?php echo $entidade['descricao'] ?? '' ?>	
-						</textarea>
+						<br>
 					</div>
 					<?php  
-						$entidade['data_post'] = $data_atual;
+						$entidade['data'] = $data_atual;
+						$entidade['id_destinatario'] = $id_destinatario;
 					?>
 					<button class="btn col-md-12 text-dark" type="submit" style="background-color: yellow;">Salvar</button>
 				</form>

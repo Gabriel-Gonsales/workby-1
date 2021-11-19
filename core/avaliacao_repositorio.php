@@ -21,7 +21,7 @@ switch ($acao) {
 		$dados = [
 			'avaliacao_descricao'		=> $avaliacao_descricao,
 			'avaliacao_nota'			=> $avaliacao_nota,
-			'avaliacao_data'	=> $data_avaliacao,
+			'avaliacao_data'	=> $data_atual,
 			'fk_post_post_id'	=> $fk_post_post_id,
 			'fk_usuario_usuario_id '	=> $_SESSION['login'] ['usuario'] ['usuario_id']
 		];

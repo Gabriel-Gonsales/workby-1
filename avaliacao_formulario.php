@@ -45,7 +45,7 @@
 						$entidade = $retorno[0];
 					}
 				?>
-				<h2>Post</h2>
+				<h2>Avaliação</h2>
 				<form method="post" action="core/avaliacao_repositorio.php">
 					<input type="hidden" name="acao"
 					       value="<?php echo empty($avaliacao_id) ? 'insert' : 'update' ?>">
