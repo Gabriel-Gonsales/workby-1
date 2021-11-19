@@ -1,0 +1,82 @@
+body{
+	background-color: #0c1617;
+}
+
+.fale_conosco{
+	color: #fcff00;
+}
+
+#imagem_gabu{
+	height: 150px; 
+	border-radius: 50%; 
+	border: 2px solid #fcff00; 
+	float: left; margin-top: 25px; 
+	margin-left: 50px;
+}
+
+#imagem_joao{
+	height: 150px; 
+	border-radius: 50%; 
+	border: 2px solid #fcff00; 
+	margin-top: 25px; 
+	margin-left: 125px;
+}
+
+#imagem_julia{
+	height: 150px; 
+	border-radius: 50%; 
+	border: 2px solid #fcff00;  
+	margin-top: 25px; 
+	margin-left: 125px;
+}
+
+#imagem_pedro{
+	height: 150px; 
+	border-radius: 50%; 
+	border: 2px solid #fcff00; 
+	float: right; 
+	margin-top: 25px; 
+	margin-right: 50px;
+}
+
+.img_contato img:active,
+.img_contato img:hover {
+  box-shadow: 10px 15px 20px rgba(105,105,105,0.9);
+  transition: 0.5s;
+}
+
+.img_contato{
+	padding-top: 20px;
+
+}
+
+.p_qs{
+	margin-right: 10px; 
+	margin-left: 20px;
+}
+
+#label_gabu{
+	margin-top: 15px; 
+	margin-left: 70px;
+}
+
+#label_joao{ 
+	margin-top: 15px; 
+	margin-left: 150px;	
+}
+
+#label_julia{ 
+	margin-top: 15px; 
+	margin-left: 190px;	
+}
+
+#label_pedro{ 
+	margin-top: 15px; 
+	margin-left: 190px;	
+}
+
+#caixa_qs{
+	margin-top: 20px; 
+	border-color: yellow; 
+	border-style: inset;
+}

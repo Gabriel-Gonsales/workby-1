@@ -7,8 +7,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="estilos/estilos.css">
 </head>
-<body class="bg-dark text-white">
+<body class=" text-white">
 	<div class="row">
 		<div class="col-md-12">
 			<!--Topo //-->
