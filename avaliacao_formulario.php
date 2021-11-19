@@ -29,15 +29,15 @@
 						$$indice = limparDados($dado);
 					}
 					$data_atual = date('Y-m-d H:i:s');
-					if (!empty($post_id)) {
-						$post_id = (int)$post_id;
+					if (!empty($avaliacao_id)) {
+						$avaliacao_id = (int)$avaliacao_id;
 
 						$criterio = [
-							['post_id', '=', $post_id]
+							['avaliacao_id', '=', $avaliacao_id]
 						];
 
 						$retorno = buscar(
-							'post',
+							'avaliacao_id',
 							['*'],
 							$criterio
 						);
@@ -46,42 +46,27 @@
 					}
 				?>
 				<h2>Post</h2>
-				<form method="post" action="core/post_repositorio.php">
+				<form method="post" action="core/avaliacao_repositorio.php">
 					<input type="hidden" name="acao"
-					       value="<?php echo empty($post_id) ? 'insert' : 'update' ?>">
+					       value="<?php echo empty($avaliacao_id) ? 'insert' : 'update' ?>">
 					<input type="hidden" name="id"
-					       value="<?php echo $entidade['post_id'] ?? '' ?>">
+					       value="<?php echo $entidade['avaliacao_id'] ?? '' ?>">
 					<div class="form_group">
-						<label for="titulo">Tipo de serviço</label>
-						<select class="form_control col-md-12" type="text" 
-						       require="required" id="tiposervico" name="tiposervico"
-						       value="<?php echo $entidade['tiposervico'] ?? '' ?>">
-						    <option value="Tecnologia da informação">Tecnologia da informação</option>
-						    <option value="Elétrica">Elétrica</option>
-							<option value="Serviços domésticos">Serviços domésticos</option>
-							<option value="Construção civil">Construção civil</option>
-							<option value="Instalação e montagem">Instalação e montagem</option>
-							<option value="Artes e design">Artes e design</option>
-							<option value="Beleza e bem-estar">Beleza e bem-estar</option>
-							<option value="Eventos">Eventos</option>
-						</select>
+						<label for="avaliacao_nota">Nota</label>
+						<input type="number" min="1" max="5" class="form_control col-md-12"
+						       require="required" id="avaliacao_nota" name="avaliacao_nota"
+						       value="<?php echo $entidade['avaliacao_nota'] ?? '' ?>">
 					</div>
 					<div class="form_group">
-						<label for="contato">Contato</label>
+						<label for="avaliacao_descricao">Descrição</label>
 						<textarea class="form_control col-md-12" type="text"
-						          require="required" id="contato" name="contato">
-						          <?php echo $entidade['contato'] ?? '' ?>	
-						</textarea>
-					</div>
-					<div class="form_group">
-						<label for="descricao">Descrição</label>
-						<textarea class="form_control col-md-12" type="text"
-						          require="required" id="descricao" name="descricao">
-						          <?php echo $entidade['descricao'] ?? '' ?>	
+						          require="required" id="avaliacao_descricao" name="avaliacao_descricao">
+						          <?php echo $entidade['avaliacao_descricao'] ?? '' ?>	
 						</textarea>
 					</div>
 					<?php  
-						$entidade['data_post'] = $data_atual;
+						$entidade['avaliacao_data'] = $data_atual;
+						$entidade['fk_post_post_id'] = $id_post;
 					?>
 					<button class="btn col-md-12 text-dark" type="submit" style="background-color: yellow;">Salvar</button>
 				</form>
