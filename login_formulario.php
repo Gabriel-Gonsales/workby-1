@@ -18,7 +18,7 @@
 	</div>
 	<div class="container" style="min-height: 500px;">
 		<div style="padding-top: 30px;">
-			<h2>Usuário</h2>
+			<h2>Login</h2>
 			<div class="card-body">
 				<form method="post" action="core/usuario_repositorio.php">
 					<input type="hidden" name="acao" value="login">

@@ -42,7 +42,7 @@
 		?>
 		<div class="container" style="min-height: 800px;">
 			<div style="padding-top: 30px;">
-				<h2>Usuário</h2>
+				<h2>Cadastre-se</h2>
 				<form method="post" action="core/usuario_repositorio.php">
 					<input type="hidden" name="acao" value="<?php echo empty($usuario_id) ? 'insert' : 'update' ?>">
 					<input type="hidden" name="usuario_id" value="<?php echo $entidade['usuario_id'] ?? '' ?>">
