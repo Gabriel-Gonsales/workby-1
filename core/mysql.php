@@ -168,7 +168,7 @@ function buscar(string $entidade, array $campos = ['-'], array $criterio = [], s
 	}
 
 	$instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
-	echo $instrucao;
+	
 	$conexao = conecta();
 
 	$stmt = mysqli_prepare($conexao, $instrucao);
@@ -178,7 +178,7 @@ function buscar(string $entidade, array $campos = ['-'], array $criterio = [], s
 		$comando .= "'" . implode('', $tipo). "'";
 		$comando .= ', $' . implode(', $', $campos_criterio);
 		$comando .= ');';
-		echo $comando;
+
 		eval($comando);
 	}
 
@@ -191,7 +191,7 @@ function buscar(string $entidade, array $campos = ['-'], array $criterio = [], s
 	}
 
 	$_SESSION['errors'] = mysqli_stmt_error_list($stmt);
-	print_r($_SESSION['errors']);
+	
 	mysqli_stmt_close($stmt);
 
 	desconecta($conexao);
