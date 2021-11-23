@@ -90,7 +90,7 @@
 			$valor = (int)$valor;
 
 			$dados = [
-				'adm' => $valor
+				'usuario_adm' => $valor
 			];
 
 			$criterio = [
