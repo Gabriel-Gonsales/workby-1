@@ -48,7 +48,7 @@
 					$criterio = [];
 
 					if (!empty($busca)) {
-						$criterio[] = ['usuario_nome', 'like', "%{$busca}%"];
+						$criterio[] = ['usuario_cpf', 'like', "%{$busca}%"];
 					}
 
 					$result = buscar(

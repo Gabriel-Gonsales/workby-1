@@ -11,7 +11,7 @@
 	$criterio = [];
 
 
-	$post = buscar(
+	$posts = buscar(
 		'post',
 		[
           'tiposervico',
@@ -24,6 +24,8 @@
 		]
 	);
 
+
+
   	$avaliacoes = buscar(
     'avaliacao',
     [
@@ -34,11 +36,12 @@
       '(select usuario_nome from usuario where usuario.usuario_id = avaliacao.fk_usuario_usuario_id) as nome'
     ],
     [
-    	$criterio,
-    	'avaliacao_data DESC'
-	]
+    	['fk_post_post_id', '=', $post_id]
+		]
   );
+  $post = $posts[0];
 ?>
+
 <html>
 	<head>
 		<title><?php echo $post['tiposervico']?></title>
@@ -72,10 +75,13 @@
 					</div>
 				</div>
 			<h4>Avaliações</h4>
-			<div class="col-md-12" style="padding-top: 50px;">
+			<div class="col-md-12" style="padding-top: 10px;">
+				<?php if (!isset($avaliacoes['avaliacao_id'])): ?>
+					<h5>Não há avaliações para esse post</h5>
+				<?php endif; ?>
 				<?php foreach($avaliacoes as $avaliacao): ?>
 				<div class="card-body">
-					<h5 class="card-tittle"><?php echo $avaliaco['avaliacao_nota']?></h5>
+					<h5 class="card-tittle"><?php echo $avaliacao['avaliacao_nota']?></h5>
 					<h5 class="card-subtittle mb-2 text-muted">
 						Por <?php echo $avaliacao['nome']?>
 					</h5>

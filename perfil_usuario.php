@@ -24,19 +24,19 @@
 		      	}
 
 		      	$criterio = ['fk_usuario_usuario_id', '=', $_SESSION['login']['usuario']['usuario_id']];
-			    $post = buscar(
+			    $posts = buscar(
 			        'post',
 			        [
 			          'post_id',
 			          'tiposervico',
 			          'contato',
-			          'descricao',
-			          'data_post'
+			          'descricao'
 			        ],
 			        [
 			        	$criterio
 			        ]
 			    );
+			    $post = $posts[0];
 			?>
 		</div>
 	</div>
