@@ -76,9 +76,6 @@
 				</div>
 			<h4>Avaliações</h4>
 			<div class="col-md-12" style="padding-top: 10px;">
-				<?php if (!isset($avaliacoes['avaliacao_id'])): ?>
-					<h5>Não há avaliações para esse post</h5>
-				<?php endif; ?>
 				<?php foreach($avaliacoes as $avaliacao): ?>
 				<div class="card-body">
 					<h5 class="card-tittle"><?php echo $avaliacao['avaliacao_nota']?></h5>
