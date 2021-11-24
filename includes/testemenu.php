@@ -58,10 +58,10 @@
       <div>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link h4 text-warning" href="usuario_formulario.php" style="font-family: 'Varela Round', sans-serif;">Cadastre-se</a>
+            <a class="nav-link h4" href="usuario_formulario.php" style="font-family: 'Varela Round', sans-serif; color: yellow;">Cadastre-se</a>
           </li>
            <li class="nav-item active">
-            <a class="nav-link h4 text-warning" href="login_formulario.php" style="font-family: 'Varela Round', sans-serif;">Login</a>
+            <a class="nav-link h4" href="login_formulario.php" style="font-family: 'Varela Round', sans-serif; color: yellow;">Login</a>
           </li>
         </ul>
       </div>
