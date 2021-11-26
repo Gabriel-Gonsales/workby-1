@@ -66,13 +66,17 @@
 			<!-- Conteudo //-->
 			<h2>Olá, <?php echo $_SESSION['login']['usuario']['usuario_nome']?>!</h2>
 		</div>
-		<div class="col-md-12" style="padding-bottom: 10px;">
+		<div class="col-md-12">
 			<a class="list-group-item list-group-item-action text-white bg-dark" href="post_detalhe.php?post_id=<?php echo $post['post_id']?>" style="border-color: yellow; border-style: inset;">
 				<h3>Serviço: <?php echo $post['tiposervico']?> </h3>
 				<p>Contato: <?php echo $post['contato']?></p>
 				<p>Descrição do serviço: <?php echo $post['descricao']?></p>
 			</a>
+		<form method="post" action="post_formulario.php?post_id=<?php echo $post['post_id']?>">
+			<button class="btn col-md-12 text-dark" type="submit" style="background-color: yellow;">Editar dados</button>			
+		</form>
 		</div>
+		<br>
 		<h2>Dados pessoais</h2>
 		<div class="col-md-12" style="padding-bottom: 10px;">
 			<a class="list-group-item text-white bg-dark" style="border-color: yellow; border-style: inset;">
