@@ -30,7 +30,7 @@
 					foreach ($_GET as $indice => $dado) {
 						$$indice = limparDados($dado);
 					}
-					$data_atual = date('Y-m-d H:i:s');
+					
 					if (!empty($post_id)) {
 						$post_id = (int)$post_id;
 
@@ -51,8 +51,8 @@
 				<form method="post" action="core/post_repositorio.php">
 					<input type="hidden" name="acao"
 					       value="<?php echo empty($post_id) ? 'insert' : 'update' ?>">
-					<input type="hidden" name="id"
-					       value="<?php echo $entidade['post_id'] ?? '' ?>">
+					<input type="hidden" name="post_id"
+					       value="<?php echo $entidade['post_id'] ?? '' ?>"> 
 					<div class="form_group">
 						<label for="titulo">Tipo de serviço</label>
 						<select class="form_control col-md-12" type="text" 
@@ -82,9 +82,6 @@
 						          <?php echo $entidade['descricao'] ?? '' ?>	
 						</textarea>
 					</div>
-					<?php  
-						$entidade['data_post'] = $data_atual;
-					?>
 					<button class="btn col-md-12 text-dark" type="submit" style="background-color: yellow;">Salvar</button>
 				</form>
 			</div>

@@ -92,6 +92,7 @@ $_SESSION['errors'] = mysqli_stmt_error_list($stmt);
 mysqli_stmt_close($stmt);
 
 desconecta($conexao);
+echo $instrucao;
 
 return $retorno;
 }

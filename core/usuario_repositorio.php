@@ -34,11 +34,10 @@
 			break;
 
 		case 'update':
-			$id_usuario = (int)$id_usuario;
+			$usuario_id = (int)$usuario_id;
 			$dados = [
 				'usuario_nome' => $usuario_nome,
 				'usuario_email' => $usuario_email,
-				'usuario_senha' => crypt($usuario_senha,$salt),
 				'usuario_genero' => $usuario_genero,
 				'usuario_telefone' => $usuario_telefone,
 				'usuario_CPF' => $usuario_CPF,

@@ -14,7 +14,7 @@ foreach ($_GET as $indice => $dado) {
 	$$indice = limparDados($dado);
 }
 
-$id = (int)$id;
+$post_id = (int)$post_id;
 
 switch ($acao) {
 	case 'insert':
