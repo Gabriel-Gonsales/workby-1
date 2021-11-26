@@ -64,21 +64,21 @@
 		<div class="container" style="min-height: 500px;">
 			<div class="col-md-12" style="padding-top: 50px;">
 				<div class="card-body">
-					<h5 class="card-tittle"><?php echo $post['tiposervico']?></h5>
+					<h3 class="card-tittle"><?php echo $post['tiposervico']?></h3>
 					<h5 class="card-subtittle mb-2 text-muted">
 						Por <?php echo $post['nome']?>
 					</h5>
 					<div class="card-text">
 						<?php echo $post['contato']?>
-						<br>
-						<?php echo $post['descricao'] ?>
+						<hr style="border-color: yellow;">
+						<p style="font-family: serif;"><?php echo $post['descricao'] ?></p>
 					</div>
 				</div>
 			<h4>Avaliações</h4>
 			<div class="col-md-12" style="padding-top: 10px;">
 				<?php foreach($avaliacoes as $avaliacao): ?>
 				<div class="card-body">
-					<h5 class="card-tittle"><?php echo $avaliacao['avaliacao_nota']?></h5>
+						<h5 class="card-tittle text-warning"><?php echo $avaliacao['avaliacao_nota']?></h5>
 					<h5 class="card-subtittle mb-2 text-muted">
 						Por <?php echo $avaliacao['nome']?>
 					</h5>

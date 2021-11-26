@@ -30,7 +30,7 @@
     </ul>
     <?php if (isset($_SESSION['login'])): ?>
     <?php
-      include 'includes/busca.php'
+      //include 'includes/busca.php'
     ?>
     <?php 
       require_once 'includes/funcoes.php';
@@ -41,9 +41,7 @@
       foreach ($_GET as $indice => $dado) {
         $$indice = limparDados($dado);
       }
-      $data_atual = date('Y-m-d H:i:s');
 
-      $criterio = [['data_postagem', '<=',$data_atual]];
     ?>
     <div class="card-body text-right text-white">
       <a href="perfil_usuario.php" class="btn btn-link btn-sm" role="buttom">

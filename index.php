@@ -21,24 +21,27 @@
 	<div class="container" style="min-height: 500px;">
 		<div class="col-md-12" style="padding-top: 50px;">	
 			<!-- Conteudo //-->
+
 			    <?php 
       				require_once 'includes/funcoes.php';
       				require_once 'core/conexao_mysql.php';
       				require_once 'core/sql.php';
      				require_once 'core/mysql.php';
 			      	foreach ($_GET as $indice => $dado) {
-			        $$indice = limparDados($dado);
+			        	$$indice = limparDados($dado);
 			      	}
+					
 
 			      if (!empty($busca)) {
 			        $criterio[] = [
-			          'AND',
 			          'tiposervico',
 			          'like',
 			          "%{$busca}%"
 			        ];
 			      }
-			      $criterio = [['post_id', '>=',1]];
+			      else{
+			      	$criterio = [];
+			      }
 			      $posts = buscar(
 			        'post',
 			        [
@@ -55,9 +58,10 @@
      			?>
 			<div>
 				<?php if (isset($_SESSION['login'])): ?>
+				<?php include 'includes/busca.php';?>
 					<h2>Serviços disponíveis</h2>
 					<div class="list-group">
-						<?php
+						<?php	
 							foreach($posts as $post):
 						?>
 						<a class="list-group-item list-group-item-action text-white bg-dark" href="post_detalhe.php?post_id=<?php echo $post['post_id']?>" style="border-color: yellow; border-style: inset;">
