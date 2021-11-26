@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Login | Projeto para Web com PHP</title>
+	<title>Login</title>
 		<link rel="stylesheet"
 			  href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">

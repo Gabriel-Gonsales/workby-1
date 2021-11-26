@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Post | Projeto para Web com PHP</title>
+		<title>Avalie</title>
 		<link rel="stylesheet" 
 		      href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
 		<script src="https://kit.fontawesome.com/401c6a38e1.js" crossorigin="anonymous"></script>
@@ -56,9 +56,16 @@
 					<input type="hidden" name="fk_post_post_id" value="<?php echo $id_post;?>">
 					<div class="form_group">
 						<label for="avaliacao_nota">Nota</label>
-						<input type="number" min="1" max="5" class="form_control col-md-12"
-						       require="required" id="avaliacao_nota" name="avaliacao_nota"
-						       value="<?php echo $entidade['avaliacao_nota'] ?? '' ?>">
+						<br>
+						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '1' ?>">1
+						<br>
+						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '2' ?>">2
+						<br>
+						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '3' ?>">3
+						<br>
+						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '4' ?>">4
+						<br>
+						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '5' ?>">5
 					</div>
 					<div class="form_group">
 						<label for="avaliacao_descricao">Descrição</label>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Usuário | Projeto para Web com PHP</title>
+		<title>Cadastre-se</title>
 		<link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
 		<script src="https://kit.fontawesome.com/401c6a38e1.js" crossorigin="anonymous"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">

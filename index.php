@@ -68,7 +68,8 @@
 							<h3><?php echo $post['tiposervico']?> </h3>
 							<p><?php echo $post['nome']?></p>
 							<p><?php echo $post['contato']?></p>
-							<p><?php echo $post['descricao']?></p>
+							<hr style="border-color: yellow;">
+							<p style="font-family: serif;"><?php echo $post['descricao']?></p>
 						</a>
 						<a class="list-group-item list-group-item-action text-white bg-dark" href="avaliacao_formulario.php?id_post=<?php echo $post['post_id']?>" style="border-color: yellow;">
 								<i class="far fa-star" style="font-size: 20px; color: yellow; font-weight: bold;"></i> Avaliar

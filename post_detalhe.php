@@ -77,14 +77,14 @@
 			<h4>Avaliações</h4>
 			<div class="col-md-12" style="padding-top: 10px;">
 				<?php foreach($avaliacoes as $avaliacao): ?>
-				<div class="card-body">
+				<div>
 						<h5 class="card-tittle text-warning"><?php echo $avaliacao['avaliacao_nota']?></h5>
 					<h5 class="card-subtittle mb-2 text-muted">
 						Por <?php echo $avaliacao['nome']?>
 					</h5>
 					<div class="card-text">
 						<?php echo $avaliacao['avaliacao_descricao']?>
-						<br>				
+						<br><br>				
 				</div>
 				<?php endforeach;?>
 			</div>
