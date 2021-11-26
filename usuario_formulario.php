@@ -8,6 +8,21 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+		<script type="text/javascript">
+			function mascara(i){
+   
+		   		var v = i.value;
+		   
+			   if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+			      i.value = v.substring(0, v.length-1);
+			      return;
+			   }
+			   
+			   i.setAttribute("maxlength", "14");
+			   if (v.length == 3 || v.length == 7) i.value += ".";
+			   if (v.length == 11) i.value += "-";
+			}
+		</script>
 	</head>
 	<body class="text-white">
 		<div class="row">
@@ -78,7 +93,7 @@
 					<?php endif; ?>
 					<div class="form-group">
 						<label for="cpf">CPF</label>
-						<input class="form-control" type="text" require="required" id="cpf" name="usuario_CPF" value="<?php echo $entidade['usuario_CPF'] ?? '' ?>">
+						<input oninput="mascara(this)" class="form-control" type="text" require="required" id="cpf" name="usuario_CPF" value="<?php echo $entidade['usuario_CPF'] ?? '' ?>">
 					</div>
 					<div class="form-group">
 						<label for="telefone">Telefone</label>
