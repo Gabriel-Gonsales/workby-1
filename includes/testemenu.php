@@ -29,9 +29,6 @@
       <?php endif; ?> 
     </ul>
     <?php if (isset($_SESSION['login'])): ?>
-    <?php
-      //include 'includes/busca.php'
-    ?>
     <?php 
       require_once 'includes/funcoes.php';
       require_once 'core/conexao_mysql.php';

@@ -79,7 +79,8 @@
 						<br>
 					<?php endforeach;?>
 					</div>
-				<?php endif; ?>
+				<?php else:header('Location: quem_somos.php'); 
+				endif; ?>
 			</div>
 		</div>
 	</div>
