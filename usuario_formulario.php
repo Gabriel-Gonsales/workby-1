@@ -23,18 +23,31 @@
 			require_once 'core/conexao_mysql.php';
 			require_once 'core/sql.php';
 			require_once 'core/mysql.php';
+	      	foreach ($_GET as $indice => $dado) {
+	        	$$indice = limparDados($dado);
+	      	}
 
 			if(isset($_SESSION['login'])){
-				$id = (int) $_SESSION['login']['usuario']['usuario_id'];
+				$usuario_id = (int)$_SESSION['login']['usuario']['usuario_id'];
 
-				$criterio = [
+				$criterio = 
 					['usuario_id', '=', $usuario_id]
-				];
+				;
 
 				$retorno = buscar(
 					'usuario',
-					['usuario_id','nome','email'],
-					$criterio
+					[
+						'usuario_nome',
+						'usuario_email',
+						'usuario_nascimento',
+						'usuario_CPF',
+						'usuario_telefone',
+						'usuario_genero'
+					],
+					[
+						$criterio
+					]
+
 				);
 
 				$entidade = $retorno[0];
