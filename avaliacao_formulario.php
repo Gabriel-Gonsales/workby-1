@@ -57,15 +57,15 @@
 					<div class="form_group">
 						<label for="avaliacao_nota">Nota</label>
 						<br>
-						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '1' ?>">1
+						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '1' ?>"> 1
 						<br>
-						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '2' ?>">2
+						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '2' ?>"> 2
 						<br>
-						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '3' ?>">3
+						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '3' ?>"> 3
 						<br>
-						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '4' ?>">4
+						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '4' ?>"> 4
 						<br>
-						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '5' ?>">5
+						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '5' ?>"> 5
 					</div>
 					<div class="form_group">
 						<label for="avaliacao_descricao">Descrição</label>
