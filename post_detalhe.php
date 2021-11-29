@@ -78,7 +78,7 @@
 			<div class="col-md-12" style="padding-top: 10px;">
 				<?php foreach($avaliacoes as $avaliacao): ?>
 				<div>
-						<h5 class="card-tittle text-warning"><?php echo $avaliacao['avaliacao_nota']?></h5>
+						<h5 class="card-tittle" style="color: yellow;"><?php echo $avaliacao['avaliacao_nota']?></h5>
 					<h5 class="card-subtittle mb-2 text-muted">
 						Por <?php echo $avaliacao['nome']?>
 					</h5>

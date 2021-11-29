@@ -30,10 +30,10 @@
       <?php if ((isset($_SESSION['login'])) && ($_SESSION['login']['usuario']['usuario_adm'] === 1)) : 
         ?>
         <li class="nav-item active">
-          <a class="nav-link h4" href="denuncias.php" style="font-family: 'Varela Round', sans-serif; color: yellow;"> Denúncias</a>
+          <a class="nav-link h5" href="denuncias.php" style="font-family: 'Varela Round', sans-serif; color: yellow; padding-top: 15px;"> Denúncias</a>
         </li>
                 <li class="nav-item active">
-          <a class="nav-link h4" href="usuarios.php" style="font-family: 'Varela Round', sans-serif; color: yellow;"> Usuários</a>
+          <a class="nav-link h5" href="usuarios.php" style="font-family: 'Varela Round', sans-serif; color: yellow; padding-top: 15px;"> Usuários</a>
         </li>
       <?php endif; ?> 
     </ul>
