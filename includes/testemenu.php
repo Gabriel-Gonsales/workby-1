@@ -20,11 +20,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link h4" href="quem_somos.php" style="font-family: 'Varela Round', sans-serif; color: yellow;">Quem somos?</a>
+        <a class="nav-link h5" href="quem_somos.php" style="font-family: 'Varela Round', sans-serif; color: yellow; padding-top: 15px;">Quem somos?</a>
       </li>
       <?php if ((isset($_SESSION['login'])) && ($_SESSION['login']['usuario']['usuario_adm'] != 1)): ?>
         <li class="nav-item active">
-          <a class="nav-link h4" href="post_formulario.php" style="font-family: 'Varela Round', sans-serif; color: yellow;"> Incluir serviço</a>
+          <a class="nav-link h5" href="post_formulario.php" style="font-family: 'Varela Round', sans-serif; color: yellow;  padding-top: 15px;"> Incluir serviço</a>
         </li>
       <?php endif; ?>
       <?php if ((isset($_SESSION['login'])) && ($_SESSION['login']['usuario']['usuario_adm'] === 1)) : 
@@ -62,10 +62,10 @@
       <div>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link h4" href="usuario_formulario.php" style="font-family: 'Varela Round', sans-serif; color: yellow;">Cadastre-se</a>
+            <a class="nav-link h5" href="usuario_formulario.php" style="font-family: 'Varela Round', sans-serif; color: yellow;  padding-top: 15px;">Cadastre-se</a>
           </li>
            <li class="nav-item active">
-            <a class="nav-link h4" href="login_formulario.php" style="font-family: 'Varela Round', sans-serif; color: yellow;">Login</a>
+            <a class="nav-link h5" href="login_formulario.php" style="font-family: 'Varela Round', sans-serif; color: yellow;  padding-top: 15px;">Login</a>
           </li>
         </ul>
       </div>

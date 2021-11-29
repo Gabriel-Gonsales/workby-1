@@ -77,7 +77,7 @@
 		</form>
 		</div>
 		<br>
-		<h2>Dados pessoais</h2>
+		<h2 style="margin-left: 13px;">Dados pessoais</h2>
 		<div class="col-md-12" style="padding-bottom: 10px;">
 			<a class="list-group-item text-white bg-dark" style="border-color: yellow; border-style: inset;">
 				<p>Nome: <?php echo $usuario['usuario_nome']?> </p>
