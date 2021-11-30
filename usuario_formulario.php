@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Cadastre-se</title>
+		<title>Dados
+		</title>
 		<link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
 		<script src="https://kit.fontawesome.com/401c6a38e1.js" crossorigin="anonymous"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,7 +94,11 @@
 		?>
 		<div class="container" style="min-height: 800px;">
 			<div style="padding-top: 30px;">
-				<h2>Cadastre-se</h2>
+				<?php if(isset($_SESSION['login'])): ?>
+					<h2>Altere seus dados</h2>
+				<?php else:?>
+					<h2>Cadastre-se</h2>
+				<?php endif;?>
 				<form method="post" action="core/usuario_repositorio.php">
 					<input type="hidden" name="acao" value="<?php echo empty($usuario_id) ? 'insert' : 'update' ?>">
 					<input type="hidden" name="usuario_id" value="<?php echo $entidade['usuario_id'] ?? '' ?>">

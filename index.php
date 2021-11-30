@@ -58,8 +58,11 @@
      			?>
 			<div>
 				<?php if (isset($_SESSION['login'])): ?>
-				<?php include 'includes/busca.php';?>
+				<div class="col-md-12" style="position: relative;">
 					<h2>Serviços disponíveis</h2>
+					<br>
+					<?php include 'includes/busca.php';?>		
+				</div>
 					<div class="list-group">
 						<?php	
 							foreach($posts as $post):

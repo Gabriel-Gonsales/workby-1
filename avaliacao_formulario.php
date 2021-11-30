@@ -57,15 +57,18 @@
 					<div class="form_group">
 						<label for="avaliacao_nota">Nota</label>
 						<br>
-						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '1' ?>">1
+						<div>
+							<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '1' ?>"> <i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i>
+							<br>
+							<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '2' ?>"> <i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i>
+							<br>
+							<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '3' ?>"> <i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i>
+							<br>
+							<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '4' ?>"> <i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i>
+							<br>
+							<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '5' ?>"> <i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i>
+						</div>
 						<br>
-						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '2' ?>">2
-						<br>
-						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '3' ?>">3
-						<br>
-						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '4' ?>">4
-						<br>
-						<input type="radio" name="avaliacao_nota" id="avaliacao_nota" value="<?php echo $entidade['avaliacao_nota'] ?? '5' ?>">5
 					</div>
 					<div class="form_group">
 						<label for="avaliacao_descricao">Descrição</label>
