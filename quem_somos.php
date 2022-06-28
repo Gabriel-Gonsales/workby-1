@@ -25,6 +25,8 @@
 				<p class="p_qs">Criado em 2021, o WorkBy foi idealizado ao ver as dificuldades de muitos autônomos divulgarem seus trabalhos, construímos um site que possibilitasse com mais facilidade um autônomo ser contratado para serviços esporádicos. </p>
 				<p class="p_qs">Desse modo, conseguimos fazer a conexão entre quem precisa de um serviço e um profissional. Nossa missão é que cada vez mais permitir que trabalhadores autônomos tenham acesso a uma ferramenta que os de suporte e ajudem na divulgação de seus serviços. </p>
 				<p class="p_qs">Este site não tem fins lucrativos.</p>
+				<br>
+				<p class="p_qs">Venha fazer sua conta!!</p>
 		</div>
 
 		<div class="img_contato col-md-12">

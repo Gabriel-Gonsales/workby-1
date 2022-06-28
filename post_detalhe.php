@@ -78,7 +78,21 @@
 			<div class="col-md-12" style="padding-top: 10px;">
 				<?php foreach($avaliacoes as $avaliacao): ?>
 				<div>
-						<h5 class="card-tittle" style="color: yellow;"><?php echo $avaliacao['avaliacao_nota']?></h5>
+						<?php if($avaliacao['avaliacao_nota'] == 1):?>
+							<i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i>
+							<?php endif;?>
+						<?php if($avaliacao['avaliacao_nota'] == 2):?>
+							<i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i>
+							<?php endif;?>
+						<?php if($avaliacao['avaliacao_nota'] == 3):?>
+							<i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i>
+							<?php endif;?>
+						<?php if($avaliacao['avaliacao_nota'] == 4):?>
+							<i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i>
+						<?php endif;?>
+						<?php if($avaliacao['avaliacao_nota'] == 5):?>
+							<i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i><i class="far fa-star" style="font-size: 14px; color: yellow; font-weight: bold;"></i>
+						<?php endif;?>
 					<h5 class="card-subtittle mb-2 text-muted">
 						Por <?php echo $avaliacao['nome']?>
 					</h5>
